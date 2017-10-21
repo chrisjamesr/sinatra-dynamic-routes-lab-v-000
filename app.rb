@@ -20,7 +20,7 @@ class App < Sinatra::Base
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    params.each {|k,v| "#{params[k]} "}.join
+    params.each {|k,v| params[k]}.join(" ")
   end
 
   get '/:operation/:number1/:number2' do
