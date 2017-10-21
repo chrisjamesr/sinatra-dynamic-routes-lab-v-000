@@ -15,15 +15,14 @@ class App < Sinatra::Base
   end
 
   get '/say/:number/:phrase' do
-    status 200
-    num = params[:number].to_i
+        num = params[:number].to_i
     num.times do
       "#{params[:phrase]}"
     end
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    
+
     params.collect {|k,v| params[k]}.join(" ")+ "."
   end
 
