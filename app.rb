@@ -4,14 +4,14 @@ class App < Sinatra::Base
   # Write your code here!
 
   get '/reversename/:name' do
-    status 200
-    params[:name].reverse
+    # status 200
+    "#{params[:name].reverse}"
   end
 
   get '/square/:number' do
     status 200
     num = params[:number].to_i
-    num * num
+    "#{num * num}"
   end
 
   get '/say/:number/:phrase' do
