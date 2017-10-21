@@ -4,19 +4,23 @@ class App < Sinatra::Base
   # Write your code here!
 
   get '/reversename/:name' do
-
+    params[:name].reverse
   end
 
   get '/square/:number' do
-
+    num = params[:number].to_i
+    num * num
   end
 
   get '/say/:number/:phrase' do
-
+    num = params[:number].to_i
+    num.times do
+      params[:phrase]
+    end
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-
+    params.each {|w| "#{w} "}.join
   end
 
   get '/:operation/:number1/:number2' do
@@ -32,7 +36,7 @@ class App < Sinatra::Base
       num1 * num2
     when 'divide'
       num1 / num2
-    end      
+    end
   end
 
 end  #  End of Class
