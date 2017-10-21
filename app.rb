@@ -18,7 +18,7 @@ class App < Sinatra::Base
     status 200
     num = params[:number].to_i
     num.times do
-      params[:phrase]
+      "#{params[:phrase]}"
     end
   end
 
@@ -34,13 +34,13 @@ class App < Sinatra::Base
     num2 = params[:number2].to_i
     case operation
     when 'add'
-      num1 + num2
+      "#{num1 + num2}"
     when 'subtract'
-      num1 - num2
+      "#{num1 - num2}"
     when 'multiply'
-      num1 * num2
+      "#{num1 * num2}"
     when 'divide'
-      num1 / num2
+      "#{num1 / num2}"
     end
   end
 
